@@ -1,0 +1,585 @@
+:root {
+    --fontcolor: #333;
+    --background: #bbcfe4;
+    --shadow: 0 0 5px 1px #9c9c9c;
+    --animation: ease 0.4s;
+  }
+  
+  ::-moz-selection {
+    background: var(--background);
+  }
+  
+  ::selection {
+    background: var(--background);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--fontcolor);
+    cursor: default;
+  }
+  
+  body * {
+    outline-color: transparent;
+  }
+  
+  .slide {}
+  
+  .itunes__header--container {
+    width: 100vw;
+    background: var(--background);
+    color: var(--fontcolor);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .itunes__header--innerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1600px;
+    margin: auto;
+    padding: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .iTunes__logo--item {
+    height: 50px;
+    width: 175px;
+    overflow: hidden;
+  }
+  
+  .iTunes__logo--item a {
+    width: 50px;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    -webkit-transition: var(--animation);
+    -o-transition: var(--animation);
+    transition: var(--animation);
+  }
+  
+  .iTunes__logo--item:hover a {
+    width: 100%;
+  }
+  
+  .iTunes__logo--item img {
+    max-height: 100%;
+    width: auto;
+  }
+  
+  .itunes__head__title--item h1 {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.5em;
+    margin: 0;
+    line-height: 50px;
+  }
+  
+  .itunes__search--item {
+    position: relative;
+  }
+  
+  .itunes__search--item:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f002";
+    font-size: 1em;
+    position: absolute;
+    left: 10px;
+    line-height: 36px;
+    opacity: 0.5;
+  }
+  
+  .itunes__search--clear {
+    display: none;
+  }
+  
+  .itunes__search--clear:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f00d";
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    line-height: 36px;
+    opacity: 0.5;
+    top: 0;
+    cursor: pointer;
+  }
+  
+  .itunes__search--item input {
+    padding: 10px 10px 10px 30px;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--fontcolor);
+  }
+  
+  .itunes__sort--container {
+    position: relative;
+  }
+  
+  .itunes__sort--innerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #333;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transition: var(--animation);
+    -o-transition: var(--animation);
+    transition: var(--animation);
+    height: 90px;
+  }
+  
+  .itunes__sort--innerContainer.hide {
+    height: 0;
+  }
+  
+  fieldset {
+    border-radius: 5px;
+    border-color: #fff;
+  }
+  
+  .itunes__sort--button {
+    font-size: 2.5em;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0 15px;
+    cursor: pointer;
+    -webkit-transition: var(--animation);
+    -o-transition: var(--animation);
+    transition: var(--animation);
+  }
+  
+  .itunes__sort--button:hover {
+    -webkit-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+    color: var(--background);
+  }
+  
+  .itunes__sort--open {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .itunes__sort--open span {
+    background: #333;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    line-height: 30px;
+    display: block;
+    width: 150px;
+    margin: auto;
+  }
+  
+  .itunes__cont {
+    margin-top: 100px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-gap: 20px;
+    padding: 35px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .itunes__post {
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    -webkit-transition: var(--animation);
+    -o-transition: var(--animation);
+    transition: var(--animation);
+    background: var(--background);
+  }
+  
+  .itunes__post:hover {
+    -webkit-box-shadow: 0 0 5px 7px #9c9c9c;
+            box-shadow: 0 0 5px 7px #9c9c9c;
+  }
+  
+  .itunes__id--container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+  }
+  
+  .itunes__meta--title {
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 20px;
+    overflow: hidden;
+  }
+  
+  .itunes__meta--artist {
+    font-size: 14px;
+  }
+  
+  .itunes__cover--container {
+    text-align: center;
+    position: relative;
+  }
+  
+  .itunes__cover--picture {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .itunes__cover--picture img {
+    border-radius: 15px;
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+  }
+  
+  .itunes__desc--container {
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    z-index: 1;
+  }
+  
+  .itunes__desc--wrap {
+    width: 170px;
+    margin: auto;
+  }
+  
+  .itunes__more--container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .itunes__more--show,
+  .itunes__more--link {
+    cursor: pointer;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    -webkit-transition: var(--animation);
+    -o-transition: var(--animation);
+    transition: var(--animation);
+    text-decoration: none;
+    margin-left: 10px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .itunes__show--item,
+  .itunes__link--item {
+    position: relative;
+    -webkit-transition: var(--animation);
+    -o-transition: var(--animation);
+    transition: var(--animation);
+    top: 0;
+  }
+  
+  .itunes__more--show:hover .itunes__show--item,
+  .itunes__more--link:hover .itunes__link--item {
+    top: 30px;
+  }
+  
+  .itunes__more--show:before,
+  .itunes__more--link:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: " ";
+    font-size: 1em;
+    line-height: 36px;
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    left: 0;
+    -webkit-transition: var(--animation);
+    -o-transition: var(--animation);
+    transition: var(--animation);
+  }
+  
+  .itunes__more--show:before {
+    content: "\f055";
+  }
+  
+  .itunes__more--link:before {
+    content: "\f07a";
+  }
+  
+  .itunes__more--show:hover::before,
+  .itunes__more--link:hover::before {
+    top: 0;
+  }
+  
+  .itunes__link--link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .goToTop {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    background: var(--background);
+    width: 50px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    opacity: 0;
+    -webkit-transition: var(--animation);
+    -o-transition: var(--animation);
+    transition: var(--animation);
+  }
+  
+  .goToTop::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f077";
+    font-size: 2em;
+  }
+  
+  .slide-left {
+    -webkit-animation: slide-left 0.5s ease-out forwards;
+    animation: slide-left 0.5s ease-out forwards;
+  }
+  
+  .slide-right {
+    -webkit-animation: slide-right 0.5s ease-out forwards;
+    animation: slide-right 0.5s ease-out forwards;
+  }
+  
+  @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-75px);
+      transform: translateX(-75px);
+    }
+  }
+  
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-90px);
+      transform: translateX(-90px);
+    }
+  }
+  
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(90px);
+      transform: translateX(90px);
+    }
+  }
+  
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(90px);
+      transform: translateX(90px);
+    }
+  }
+  
+  
+  /*  */
+  
+  @-webkit-keyframes slide-left-back {
+    0% {
+      -webkit-transform: translateX(-90px);
+      transform: translateX(-90px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-left-back {
+    0% {
+      -webkit-transform: translateX(-90px);
+      transform: translateX(-90px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+  @-webkit-keyframes slide-right-back {
+    0% {
+      -webkit-transform: translateX(90px);
+      transform: translateX(90px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-right-back {
+    0% {
+      -webkit-transform: translateX(90px);
+      transform: translateX(90px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+  
+  /* MEDIA QUERY */
+  
+  @media(max-width: 1024px) {
+    .itunes__cont {
+      margin-top: 150px;
+    }
+  }
+  
+  @media(max-width: 768px) {
+    .itunes__head__title--item h1 {
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+  }
+  
+  @media(max-width: 460px) {
+    .itunes__header--innerContainer {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      padding: 10px 0;
+    }
+    .itunes__logo--container {
+      width: 50px;
+      margin: 0 15px;
+      overflow: hidden;
+    }
+    .itunes__head__title--container {
+      width: calc( 100% - 100px);
+      padding: 0 10px;
+    }
+    .itunes__head__title--item h1 {
+      font-size: 1em;
+      line-height: 20px;
+    }
+    .itunes__search--container {
+      width: 100%;
+      margin: 10px;
+    }
+    .itunes__search--item {
+      width: 100%;
+    }
+    .itunes__search--item input {
+      width: calc( 100% - 40px);
+    }
+    .itunes__cont {
+      margin-top: 150px;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+    .itunes__sort--innerContainer {
+      height: 200px;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+    }
+    fieldset {
+      width: 100%;
+    }
+    .itunes__sort--button {
+      font-size: 2em;
+    }
+    .itunes__desc--container {
+      display: none;
+    }
+    .itunes__more--show {
+      display: none;
+    }
+    .itunes__cover--container {
+      text-align: left;
+    }
+    h1.itunes__meta--title {
+      font-size: 18px;
+      white-space: normal;
+    }
+  }

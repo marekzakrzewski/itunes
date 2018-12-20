@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iTunes top 100</title>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="https://itunes.apple.com/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script async src="./js/script.js"></script>
+</head>
+<body>
+    <div class="itunes__header--container">
+        <div class="itunes__header--innerContainer">
+            <div class="itunes__logo--container">
+                <div class="iTunes__logo--item">
+                    <a href="https://itunes.apple.com/" target="_blank"><img src="./img/iTunes_logo.png" alt="iTunes logo"></a>
+                </div>
+            </div>
+            <div class="itunes__head__title--container">
+                <div class="itunes__head__title--item">
+                    <h1>iTunes Charts - top 100 albums worldwide</h1>
+                </div>
+            </div>
+            <div class="itunes__search--container">
+                <div class="itunes__search--item">
+                    <input type="text" placeholder="Search...">
+                    <span class="itunes__search--clear"></span>
+                </div>
+            </div>
+        </div>
+        <div class="itunes__sort--container">
+            <div class="itunes__sort--innerContainer hide">
+                <fieldset>
+                <legend>Sort by</legend>
+                    <input type="radio" name="sortBy" id="sortTitle" value="Title" checked/>
+                    <label for="sortTitle">Title</label>
+                    <input type="radio" name="sortBy" id="sortArtist" value="Name"/>
+                    <label for="sortArtist">Artist</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Display</legend>
+                    <input type="radio" name="displayBy" id="displayAZ" value="az" checked/>
+                    <label for="displayAZ">Ascending</label>
+                    <input type="radio" name="displayBy" id="displayZA" value="za"/>
+                    <label for="displayZA">Descending</label>
+                </fieldset>
+                <div class="itunes__sort--button">sort</div>
+            </div>
+            <div class="itunes__sort--open">
+                <span>Sort option</span>
+            </div>
+        </div>
+    </div>
+    <div class="itunes__cont">
+    </div>
+    <div class="goToTop"></div>
+</body>
+</html>
